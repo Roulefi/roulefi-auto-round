@@ -1,0 +1,16 @@
+{
+  "name": "roulette-round",
+  "version": "1.0.0",
+  "description": "",
+  "main": "spin.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "near-api-js": "^0.42.0",
+    "regenerator-runtime": "^0.13.9"
+  }
+}
