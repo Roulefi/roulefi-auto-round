@@ -48,7 +48,7 @@ class Contract {
     }
 
     async get_contract_status() {
-        await this.contract.get_contract_status()
+        return await this.contract.get_contract_status()
     }
   
     async spin_wheel() {
