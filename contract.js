@@ -35,7 +35,7 @@ class Contract {
           // View methods are read-only – they don't modify the state, but usually return some value
           viewMethods: ['get_contract_status', 'get_round_status'],
           // Change methods can modify the state, but you don't receive the returned value when called
-          changeMethods: ['spin_wheel', ],
+          changeMethods: ['spin_wheel'],
           // Sender is the account ID to initialize transactions.
           // getAccountId() will return empty string if user is still unauthorized
           sender: account
@@ -44,15 +44,15 @@ class Contract {
     }
   
     async get_round_status() {
-      return await this.contract.get_round_status()
+      return await this.contract.get_round_status({})
     }
 
     async get_contract_status() {
-        return await this.contract.get_contract_status()
+        return await this.contract.get_contract_status({})
     }
   
     async spin_wheel() {
-      await this.contract.spin_wheel()
+      await this.contract.spin_wheel({})
     }
   
   }
