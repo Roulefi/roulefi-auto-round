@@ -1,5 +1,5 @@
 {
-  "name": "roulette-round",
+  "name": "roulefi-auto-round",
   "version": "1.0.0",
   "description": "",
   "main": "spin.js",
@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autobahn": "^20.9.2",
     "near-api-js": "^0.42.0",
-    "regenerator-runtime": "^0.13.9"
+    "ws": "^2.3.1"
   }
 }

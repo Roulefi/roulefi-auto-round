@@ -1,6 +1,7 @@
-const CONTRACT_NAME = 'roulette.bhc3.testnet' || 'asdf.test'; /* TODO: change this to your account */
+import { env } from "./env.js"
+const CONTRACT_NAME = 'app.roulefi.testnet'; 
 
-export default function getConfig(env) {
+export default function getConfig() {
     switch (env) {
       case 'production':
       case 'mainnet':
