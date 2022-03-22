@@ -7,7 +7,7 @@ const handler = async (value) => {
   console.log(value.latestBlockHeight)
   try {
     let contractStatus = await contract.get_contract_status()
-    if (round.next_round_block_index < Number(value.latestBlockHeight) && contractStatus.bet_count > 0) {
+    if (roundStatus.next_round_block_index < Number(value.latestBlockHeight) && contractStatus.bet_count > 0) {
       await contract.spin_wheel()
       roundStatus = await contract.get_round_status()
     }
