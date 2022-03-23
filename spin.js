@@ -11,8 +11,8 @@ const handler = async (value) => {
   }
   try {
     if (roundStatus.next_round_block_index < Number(value.latestBlockHeight)) {
-      let contractStatus = await contract.get_contract_status()
-      if (contractStatus.bet_count > 0) {
+      let newRoundStatus = await contract.get_round_status()
+      if (newRoundStatus.bet_count > 0) {
         spinning = true
         await contract.spin_wheel(roundStatus.round_index)
         spinning = false
