@@ -51,8 +51,8 @@ class Contract {
         return await this.contract.get_contract_status({})
     }
   
-    async spin_wheel() {
-      await this.contract.spin_wheel({})
+    async spin_wheel(roundIndex) {
+      await this.contract.spin_wheel({round_index: roundIndex})
     }
   
   }

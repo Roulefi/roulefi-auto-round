@@ -14,7 +14,7 @@ const handler = async (value) => {
       let contractStatus = await contract.get_contract_status()
       if (contractStatus.bet_count > 0) {
         spinning = true
-        await contract.spin_wheel()
+        await contract.spin_wheel(roundStatus.round_index)
         spinning = false
         roundStatus = await contract.get_round_status()
       }
